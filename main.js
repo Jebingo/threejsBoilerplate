@@ -58,7 +58,10 @@ window.addEventListener('resize', () =>{
 const controls = new OrbitControls(camera, renderer.domElement)
 
 // GUI CONTROLS
-gui.add(camera.setZ, 'Z')
+const color = { color: 0xffffff }
+gui.addColor(color, 'color').onChange(() =>{
+    torus.color.set(color.color)
+})
 
 // ANIMATE FUNCTION
 function animate()
