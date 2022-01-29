@@ -16,6 +16,9 @@ camera.position.setZ(5)
 // DEBUG
 const gui = new dat.GUI()
 
+// TEXTURE LOADER
+const loader = new THREE.TextureLoader()
+
 // OBJECTS
 const geometry = new THREE.TorusGeometry(1, .3, 16, 100)
 
