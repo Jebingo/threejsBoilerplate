@@ -60,7 +60,12 @@ const controls = new OrbitControls(camera, renderer.domElement)
 // GUI CONTROLS
 const color = { color: 0xffffff }
 gui.addColor(color, 'color').onChange(() =>{
-    material.color.set(color.color)
+  material.color.set(color.color)
+})
+
+// EVENT LISTENERS
+document.addEventListener('mousemove', (e) =>{
+  camera.position.z = 25 - e.clientY * .01
 })
 
 // ANIMATE FUNCTION
