@@ -18,12 +18,15 @@ const gui = new dat.GUI()
 
 // TEXTURE LOADER
 const loader = new THREE.TextureLoader()
+const texture = loader.load('src/texture.jpg')
 
 // OBJECTS
 const geometry = new THREE.TorusGeometry(1, .3, 16, 100)
 
 // MATERIALS
-const material = new THREE.MeshBasicMaterial({color: 0x00aaff})
+const material = new THREE.MeshBasicMaterial({
+  map: texture,
+})
 
 // MESH
 const torus = new THREE.Mesh(geometry, material)
