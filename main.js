@@ -65,15 +65,13 @@ gui.addColor(color, 'color').onChange(() =>{
 
 // EVENT LISTENERS
 document.addEventListener('mousemove', (e) =>{
-  camera.position.z = 25 - e.clientY * .01
+  torus.rotation.x += e.clientX * .0001
+  torus.rotation.y += e.clientY * .0001
 })
 
 // ANIMATE FUNCTION
 function animate()
 {
-  torus.rotation.x += .025
-  torus.rotation.y += .025
-  
   renderer.render(scene, camera)
   requestAnimationFrame(animate)
 }
