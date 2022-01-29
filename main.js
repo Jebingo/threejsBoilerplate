@@ -1,6 +1,7 @@
 import './style.css'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
+import * as dat from 'dat.gui'
 
 // SCENE, CAMERA AND RENDERER SETUP
 const scene = new THREE.Scene()
@@ -11,6 +12,9 @@ const renderer = new THREE.WebGLRenderer({
 renderer.setPixelRatio(window.devicePixelRatio)
 renderer.setSize(window.innerWidth, window.innerHeight)
 camera.position.setZ(5)
+
+// DEBUG
+const gui = new dat.GUI()
 
 // OBJECTS
 const geometry = new THREE.TorusGeometry(1, .3, 16, 100)
@@ -49,6 +53,9 @@ window.addEventListener('resize', () =>{
 
 // CONTROLS
 const controls = new OrbitControls(camera, renderer.domElement)
+
+// GUI CONTROLS
+gui.add(camera.setZ, 'Z')
 
 // ANIMATE FUNCTION
 function animate()
