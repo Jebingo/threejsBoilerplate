@@ -68,8 +68,8 @@ gui.addColor(color, 'color').onChange(() =>{
 
 // EVENT LISTENERS
 document.addEventListener('mousemove', (e) =>{
-  torus.rotation.x += e.clientX * .0001
-  torus.rotation.y += e.clientY * .0001
+  torus.rotation.x = (e.clientY - window.innerHeight / 2) * .002 
+  torus.rotation.y = (e.clientX - window.innerWidth / 2) * .002
 })
 
 // ANIMATE FUNCTION
