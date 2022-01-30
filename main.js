@@ -20,7 +20,7 @@ const gui = new dat.GUI()
 const loader = new THREE.TextureLoader()
 const texture = loader.load('src/texture.jpg')
 
-// OBJECTS
+// GEOMETRY
 const geometry = new THREE.TorusGeometry(1, .3, 16, 100)
 
 // MATERIALS
