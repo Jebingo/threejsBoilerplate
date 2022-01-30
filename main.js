@@ -24,7 +24,7 @@ const texture = loader.load('src/texture.jpg')
 const geometry = new THREE.TorusGeometry(1, .3, 16, 100)
 
 // MATERIALS
-const material = new THREE.MeshBasicMaterial({
+const material = new THREE.MeshStandardMaterial({
   map: texture,
 })
 
