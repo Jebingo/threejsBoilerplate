@@ -21,7 +21,7 @@ const loader = new THREE.TextureLoader()
 const texture = loader.load('src/texture.jpg')
 
 // GEOMETRY
-const geometry = new THREE.TorusGeometry(1, .3, 16, 100)
+const geometry = new THREE.SphereBufferGeometry(1, 32, 32)
 
 // MATERIALS
 const material = new THREE.MeshStandardMaterial({
